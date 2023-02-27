@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mobile Dokan</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="navbar bg-slate-100">
+                <div class="flex-1 text-4xl ">
+                    <a class=" font-semibold">Mobile <span class="text-violet-700 font-sans font-bold">Dokan</span></a>
+                </div>
+                <div class="mx-5 md:flex gap-5">
+                    <button class="btn btn-primary"> Sign in</button>
+
+                </div>
+
+            </div>
+        </nav>
+        <section
+            style="background-color: rgba(0, 0, 0, 0.635); width: 100%; height: 100vh; background-image: url('https://www.digitaltrends.com/wp-content/uploads/2022/07/Nothing-Phone-1-Apps.jpg?p=1');background-blend-mode: multiply;background-position: center;background-size: cover;"
+            class="">
+            <div class="flex justify-center items-center h-[300px]">
+                <div class="form-control">
+                    <div class="input-group">
+                        <input id="input-filed" type="text" placeholder="Search…" class="input w-[300px]" />
+                        <button onclick="searchPhone()" class="btn btn-primary rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-center font-semibold text-white text-5xl">Latest Official <span
+                        class="text-red-600">✭</span> Phones in Bangladesh</h1>
+            </div>
+            <div id="showSpinner" class="hidden my-4">
+                <div class="flex items-center justify-center">
+                    <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-[#facc15] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                        role="status">
+                        <span
+                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </header>
+    <main>
+
+        <section class="my-5 md:mx-20">
+
+            <div id="phone-container" class="grid md:grid-cols-3 gap-4">
+
+
+            </div>
+            <div id="show-msg" class="hidden">
+                <h1 class="text-center font-semibold text-red-600">No search found...</h1>
+            </div>
+            <div class="hidden text-center my-4  " id="show-more-btn">
+                <div class="card-actions flex justify-end">
+                    <button class="btn btn-primary">Show more...</button>
+                </div>
+            </div>
+            <div>
+                <!-- modal -->
+                <!-- The button to open modal -->
+
+
+                <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                <div class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <div id="modal-container"></div>
+                        <!-- <h3 class="font-bold text-lg" >Congratulations random Internet user!</h3>
+                        <p class="py-4">
+                        </p> -->
+                        <div class="modal-action">
+                            <label for="my-modal-6" class="btn">Close</label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
